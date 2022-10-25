@@ -1,8 +1,3 @@
-//const btn = document.querySelector(".size");
-//btn.addEventListener('click', getNewPixelCount);
-
-let pixelCount = 16;
-
 function colorsIn(e) {
   this.classList.add('colored');
 }
@@ -29,4 +24,20 @@ function wipeCanvas() {
   rows.forEach((row) => {canvas.removeChild(row)});
 }
 
+function newCanvas(e) {
+  let newPixels = +prompt("Please enter the new size of the grid (<=100)");
+  if (typeof newPixels !== 'number' || newPixels <= 0 || newPixels > 100) {
+    alert("Bad input");
+    return;
+  } else {
+    pixelCount = newPixels;
+    wipeCanvas();
+    drawCanvas(pixelCount);
+  }
+}
+
+let pixelCount = 16;
 drawCanvas(pixelCount);
+
+const btn = document.querySelector(".size");
+btn.addEventListener('click', newCanvas);
