@@ -1,13 +1,15 @@
 .canvas {
   display: flex;
+  width: 960px;
+  height: 960px;
 }
 
 .pixel {
-  flex: 1;
-  border: none;
-  background-color: red;
+  flex: auto;
 }
 
 .col {
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
