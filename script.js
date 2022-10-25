@@ -18,4 +18,10 @@ function drawCanvas(pixels) {
   }
 }
 
+function wipeCanvas() {
+  const rows = document.querySelectorAll('.col');
+  const canvas = document.querySelector('.canvas');
+  rows.forEach(row => {canvas.removeChild(row)});
+}
+
 drawCanvas(pixelCount);
