@@ -1,0 +1,13 @@
+.canvas {
+  display: flex;
+}
+
+.pixel {
+  flex: 1;
+  border: none;
+  background-color: red;
+}
+
+.col {
+  flex: 1;
+}
